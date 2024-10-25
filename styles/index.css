@@ -1,0 +1,216 @@
+.editor {
+  /* Polar Night */
+  --base00: hsl(220 16% 22%);
+  --base01: hsl(222 16% 28%);
+  --base02: hsl(220 17% 32%);
+  --base03: hsl(220 16% 40%);
+
+  /* Snow Storm */
+  --base04: hsl(219 28% 88%);
+  --base05: hsl(218 27% 92%);
+  --base06: hsl(218 27% 94%);
+
+  /* Frost */
+  --base07: hsl(179 25% 65%);
+  --base08: hsl(193 43% 67%);
+  --base09: hsl(210 44% 63%);
+  --base0A: hsl(213 42% 52%);
+
+  /* Aurora */
+  --base0B: hsl(354 62% 56%);
+  --base0C: hsl(14 61% 63%);
+  --base0D: hsl(40 81% 73%);
+  --base0E: hsl(92 38% 55%);
+  --base0F: hsl(311 40% 63%);
+
+  .CodeMirror {
+    /* Background color of main window */
+    background-color: transparent;
+    color: var(--base02);
+    --fat-cursor-color: var(--base08);
+
+    .CodeMirror-scroll {
+      /* Color of otherwise un-styled text */
+      color: var(--base02);
+    }
+    .CodeMirror-gutters {
+      /* Gutter to the left */
+      background-color: transparent;
+      border-right: 1px solid hsl(0deg 100% 0% / 10%);
+    }
+    .CodeMirror-linenumber {
+      /* Line numbers in the gutter */
+      color: var(--base03);
+      opacity: 0.6;
+    }
+    .CodeMirror-selected {
+      /* Highlighed text */
+      background-color: var(--base05);
+    }
+    .CodeMirror-focused .CodeMirror-selected {
+      /* Highlighed text */
+      background-color: var(--base04);
+    }
+    .CodeMirror-cursor {
+      /* The cursor */
+      border-left: 1px solid var(--base00);
+    }
+    .CodeMirror-matchingbracket,
+    .CodeMirror-matchingtag {
+      /* When you click a tag/bracket and the matching one is highlighted */
+      background: var(--base03) !important;
+      border-bottom: 1px solid var(--base08) !important;
+    }
+    .CodeMirror-foldgutter-open:after {
+      /* Those little arrows in the gutter */
+      color: var(--base03);
+    }
+    .CodeMirror-foldgutter-folded:after {
+      /* The arrows after you collapse code */
+      color: var(--base03);
+    }
+    .CodeMirror.over-gutter,
+    .CodeMirror-activeline {
+      .CodeMirror-foldgutter-open:after {
+        /* Arrows when hovering on the gutter */
+        color: var(--base03);
+      }
+    }
+    .CodeMirror-foldmarker {
+      /* The [...] marking collapsed code */
+      border-color: var(--base03);
+      background-color: var(--base03);
+      color: var(--base02);
+    }
+    .CodeMirror .CodeMirror-linewidget img.inline-widget {
+      background: rgba(0, 0, 0, 0.05);
+    }
+    .CodeMirror-searching {
+      /* Ctrl + F results */
+      background-color: var(--base0D);
+      /* Selected result */
+      &.searching-current-match {
+        background-color: var(--base0C);
+      }
+    }
+  }
+
+  /* All 'dem swatches */
+
+  .CodeMirror {
+    .cm-quote {
+      color: var(--base0F);
+      font-style: italic;
+    }
+    .cm-atom,
+    .cm-formatting-list.cm-variable-3 {
+      color: var(--base0C);
+    }
+
+    .cm-keyword,
+    .cm-formatting-list.cm-variable-2 {
+      color: var(--base0A);
+    }
+
+    .cm-url,
+    .cm-string,
+    .cm-string-2,
+    .cm-hr {
+      color: var(--base09);
+    }
+    .cm-number,
+    .cm-attribute,
+    .cm-plus {
+      color: var(--base0A);
+    }
+    .cm-def,
+    .cm-property {
+      color: var(--base0C);
+    }
+    .cm-variable {
+      color: var(--base0A);
+    }
+    .cm-operator,
+    .cm-meta,
+    .cm-bracket {
+      color: var(--base0E);
+    }
+    .cm-comment {
+      color: var(--base03);
+      font-style: italic;
+    }
+    .cm-error,
+    .cm-minus {
+      color: var(--base0B);
+    }
+    .cm-formatting-header {
+      opacity: 0.3;
+    }
+    .cm-header {
+      color: var(--base0A);
+    }
+    .cm-link {
+      color: var(--base0E);
+      text-underline-position: under;
+    }
+    .cm-rangeinfo {
+      color: var(--base0C);
+    }
+    .cm-qualifier,
+    .cm-builtin,
+    .cm-tag {
+      color: var(--base08);
+    }
+    .cm-whitespace::before {
+      color: var(--base04);
+      opacity: 0.4;
+    }
+    .cm-formatting-quote,
+    .cm-formatting-strong,
+    .cm-formatting-em {
+      opacity: 0.6;
+    }
+    .cm-strong {
+      color: var(--base0B);
+    }
+    .cm-em {
+      color: var(--base0C);
+    }
+
+    /* carriage return */
+    .CodeMirror-code > div > pre > span::after,
+    .CodeMirror-line > span::after {
+      color: var(--base00);
+      opacity: 0.4;
+    }
+
+    .cm-inline-code {
+      background: rgba(0, 0, 0, 0.02);
+      color: var(--base03);
+    }
+
+    .gfm-codeblock-bg.CodeMirror-linebackground {
+      background: rgba(0, 0, 0, 0.01);
+    }
+
+    .cm-table-sep,
+    .table-row.table-row-1 {
+      color: var(--base0E);
+    }
+
+    .cm-quote.cm-link-barelink {
+      font-style: normal;
+      color: var(--base0B);
+    }
+  }
+
+  /* Active Line Highlight support */
+  .CodeMirror-activeline-background,
+  .CodeMirror-activeline-gutter {
+    background-color: color-mix(
+      in srgb,
+      var(--base06),
+      transparent 70%
+    ) !important;
+  }
+}

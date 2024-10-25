@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "name": "YOUR-syntax",
+  "description": "New syntax theme",
+  "theme": "syntax",
+  "scripts": {},
+  "styleSheets": [
+    "index.css"
+  ],
+  "engines": {
+    "inkdrop": "^5.x"
+  }
+}
